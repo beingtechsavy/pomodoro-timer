@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>arpan</title>
+    <title>Revibe!</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="app">
       <progress id="js-progress" value="0"></progress>
       <div class="progress-bar"></div>
+      <div><h1>Revibe</h1></div>
       <div class="timer">
         <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
@@ -34,6 +37,7 @@
           >
             Long break
           </button>
+          <button id="js-motivation" class="button mode-button" onclick="displayQuote()">Get Motivation</button>
         </div>
         <div class="clock" id="js-clock">
           <span id="js-minutes">25</span>
@@ -41,9 +45,16 @@
           <span id="js-seconds">00</span>
         </div>
         <button class="main-button" data-action="start" id="js-btn">
-          Start
+          Shuru Ho
         </button>
       </div>
+      <div id="main-content">
+        <p id="quotes">Loading...</p>
+        <p id="author"></p>
+        <button id="copy-button" ><span class="material-symbols-outlined">
+            content_copy
+            </span></button>
+    </div>
     </main>
     <div class="hidden">
       <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
